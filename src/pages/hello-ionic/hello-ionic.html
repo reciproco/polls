@@ -3,35 +3,106 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Tamoe</ion-title>
+    <ion-title>Tamoe voting system </ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+<ion-card id="card1">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/descarga.png">
+    </ion-avatar>
+    <h2>Doctor Uson</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
 
-  <h3>Bienvenido al sistema de votación de Tamoe</h3>
+  <img src="assets/img/medical.png">
 
-  <p>
-     Es una simple prueba de concepto de la aplicación
-  </p>
-  <p>
-    Se controla desde el power point!!
-  </p>
-            <div id="task_runner_div" style="margin-top:50px;">
-                <h2>Preguntas</h2>
-                <div id="pregunta1">¿Hay vida en marte?</div>
-                <div id="pregunta2">¿Qué es el arte?</div>
-                <div id="pregunta3">¿A qué velocidad corre el guepardo?</div>
-                <form id="taskform">
-                    <input id="task_name" type="text" placeholder="voto">
-                    <input id="pregunta" type="hidden" placeholder="pregunta">
-                    <button type="submit" id="go" >votar</button>
-                </form>
-            </div>
+  <ion-card-content>
+    <p>¿Hay vida en marte?</p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{p1}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <button ion-button item-right outline small on-tap="vote(1)">Votar</button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+<ion-card id="card2"  on-tap="vote(2)">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/descarga.png">
+    </ion-avatar>
+    <h2>Doctor Ferrán</h2>
+    <p>May 5, 1939</p>
+  </ion-item>
 
-  <p>
-    <button ion-button color="primary" menuToggle>Menu</button>
-  </p>
+  <img src="assets/img/pills.png">
 
+  <ion-card-content>
+    <p>¿A qué velocidad corre el guepardo?</p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{p2}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <button ion-button item-right outline small on-tap="vote(2)">Votar</button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+<ion-card id="card3"  on-tap="vote(3)">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/descarga.png">
+    </ion-avatar>
+    <h2>Doctor Uson</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+
+  <img src="assets/img/medical2.png">
+
+  <ion-card-content>
+    <p>¿Qué es el arte?</p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{p3}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <button ion-button item-right outline small on-tap="vote(3)">Votar</button>
+    </ion-col>
+  </ion-row>
+</ion-card>
 </ion-content>
