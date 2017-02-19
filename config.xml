@@ -14,6 +14,7 @@
   <allow-intent href="geo:*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
+    <preference name="phonegap-version" value="4.0.2" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>
