@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Tamoe voting system </ion-title>
+    <ion-title>Tamoe demo</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,16 +12,16 @@
 <ion-card id="card1">
   <ion-item>
     <ion-avatar item-left>
-      <img src="assets/img/descarga.png">
+      <img src="assets/img/unnamed.jpg">
     </ion-avatar>
-    <h2>Doctor Uson</h2>
-    <p>November 5, 1955</p>
+    <h2>Fermín García</h2>
+    <p>November 5, 1976</p>
   </ion-item>
 
-  <img src="assets/img/medical.png">
+  <img src="assets/img/Diapositiva01.jpg">
 
   <ion-card-content>
-    <p>¿Hay vida en marte?</p>
+    <p>Diapositiva 1</p>
   </ion-card-content>
   <ion-row>
     <ion-col>
@@ -37,23 +37,23 @@
       </button>
     </ion-col>
     <ion-col center text-center>
-      <button ion-button item-right outline small on-tap="vote(1)">Votar</button>
+      <button ion-button item-right outline small on-tap="vote(1)"><ion-icon name="heart"></ion-icon></button>
     </ion-col>
   </ion-row>
 </ion-card>
-<ion-card id="card2"  on-tap="vote(2)">
+<ion-card id="card2">
   <ion-item>
     <ion-avatar item-left>
-      <img src="assets/img/descarga.png">
+      <img src="assets/img/unnamed.jpg">
     </ion-avatar>
-    <h2>Doctor Ferrán</h2>
-    <p>May 5, 1939</p>
+    <h2>Fermín García</h2>
+    <p>November 5, 1976</p>
   </ion-item>
 
-  <img src="assets/img/pills.png">
+  <img src="assets/img/Diapositiva02.jpg">
 
   <ion-card-content>
-    <p>¿A qué velocidad corre el guepardo?</p>
+    <p>Diapositiva 2</p>
   </ion-card-content>
   <ion-row>
     <ion-col>
@@ -69,23 +69,23 @@
       </button>
     </ion-col>
     <ion-col center text-center>
-      <button ion-button item-right outline small on-tap="vote(2)">Votar</button>
+      <button ion-button item-right outline small on-tap="vote(2)"><ion-icon name="heart"></ion-icon></button>
     </ion-col>
   </ion-row>
 </ion-card>
-<ion-card id="card3"  on-tap="vote(3)">
+<ion-card id="card3">
   <ion-item>
     <ion-avatar item-left>
-      <img src="assets/img/descarga.png">
+      <img src="assets/img/unnamed.jpg">
     </ion-avatar>
-    <h2>Doctor Uson</h2>
-    <p>November 5, 1955</p>
+    <h2>Fermín García</h2>
+    <p>November 5, 1976</p>
   </ion-item>
 
-  <img src="assets/img/medical2.png">
+  <img src="assets/img/Diapositiva03.jpg">
 
   <ion-card-content>
-    <p>¿Qué es el arte?</p>
+    <p>Diapositiva 3</p>
   </ion-card-content>
   <ion-row>
     <ion-col>
@@ -101,7 +101,71 @@
       </button>
     </ion-col>
     <ion-col center text-center>
-      <button ion-button item-right outline small on-tap="vote(3)">Votar</button>
+      <button ion-button item-right outline small on-tap="vote(3)"><ion-icon name="heart"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+<ion-card id="card4">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/unnamed.jpg">
+    </ion-avatar>
+    <h2>Doctor Ferrán</h2>
+    <p>May 5, 1939</p>
+  </ion-item>
+
+  <img src="assets/img/Diapositiva04.jpg">
+
+  <ion-card-content>
+    <p>Diapositiva 4</p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{p4}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <button ion-button item-right outline small on-tap="vote(4)"><ion-icon name="heart"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+<ion-card id="card5">
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/unnamed.jpg">
+    </ion-avatar>
+    <h2>Fermín García</h2>
+    <p>November 5, 1976</p>
+  </ion-item>
+
+  <img src="assets/img/Diapositiva05.jpg">
+
+  <ion-card-content>
+    <p>Diapositiva 5</p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{p3}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <button ion-button item-right outline small on-tap="vote(3)"><ion-icon name="heart"></ion-icon></button>
     </ion-col>
   </ion-row>
 </ion-card>

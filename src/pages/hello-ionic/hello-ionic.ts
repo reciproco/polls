@@ -15,23 +15,27 @@ export class HelloIonicPage {
   p1: number;
   p2: number;
   p3: number;
+  p4: number;
+  p5: number;
   selected: number;
 
   constructor() {
       this.p1 = 0;
       this.p2 = 0;
       this.p3 = 0;
+      this.p4 = 0;
+      this.p5 = 0;
       this.selected  = 0;
 
   }
   ionViewWillEnter() { 
     var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
     //var ws_path = ws_scheme + '://' + window.location.host + '/';
-    var ws_path = ws_scheme + '://192.168.1.38:8000/';
+    var ws_path = ws_scheme + '://192.168.1.81:8000/';
     console.log("Connecting to " + ws_path)
     this.socket = new ReconnectingWebSocket(ws_path);
     this.socket.debug = true;
-    this.socket.reconnectInterval = 100;
+    this.socket.reconnectInterval = 1000;
     this.socket.maxReconnectInterval = 3000;
 
     this.socket.onmessage = (message) => {
@@ -48,44 +52,29 @@ export class HelloIonicPage {
             if(data.pregunta == 3) {
                 this.p3 = data.votos;
             }
+            if(data.pregunta == 4) {
+                this.p3 = data.votos;
+            }
+            if(data.pregunta == 5) {
+                this.p3 = data.votos;
+            }
         }
 
         if (data.action == "initial") {
             this.selected = data.pregunta;
-            $('#card1')
-            .css('background-color', '')
-            $('#card2')
-            .css('background-color', '')
-            $('#card3')
-            .css('background-color', '')
+            $('.card')
+            .hide();
             $('#card' + data.pregunta)
-            .css('background-color', 'LightBlue')
-            if(data.pregunta==3){
-                this.scrollTo(650);
-            } else if(data.pregunta==2) {
-                this.scrollTo(390);
-            } else {
-                this.scrollTo(0);
-            }
+            .slideDown();
+
         }
         // if action is completed, just update the status
         else if (data.action == "completed"){
             this.selected = data.pregunta;
-            $('#card1')
-            .css('background-color', '')
-            $('#card2')
-            .css('background-color', '')
-            $('#card3')
-            .css('background-color', '')
+            $('.card')
+            .hide();
             $('#card' + data.pregunta)
-            .css('background-color', 'LightBlue')
-            if(data.pregunta==3){
-                this.scrollTo(650);
-            } else if(data.pregunta==2) {
-                this.scrollTo(390);
-            } else {
-                this.scrollTo(0);
-            }
+            .slideDown();
         }
     };
   }
@@ -101,10 +90,5 @@ export class HelloIonicPage {
             this.socket.send(JSON.stringify(message));
             return false;
         }
-  }
-
-  scrollTo(y) {
-    console.log('scroll ' + y);
-    this.content.scrollTo(0, y, 200);
   }
 }
